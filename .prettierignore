@@ -12,3 +12,4 @@ private/*.json
 analytics.json
 supported-features.json
 service-definitions.yml
+/.vercel
