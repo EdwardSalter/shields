@@ -186,6 +186,8 @@ const privateConfigSchema = Joi.object({
   sonarqube_token: Joi.string(),
   teamcity_user: Joi.string(),
   teamcity_pass: Joi.string(),
+  tfs_user: Joi.string(),
+  // tfs_pass: Joi.string(),
   twitch_client_id: Joi.string(),
   twitch_client_secret: Joi.string(),
   wheelmap_token: Joi.string(),

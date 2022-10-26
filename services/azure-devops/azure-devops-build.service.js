@@ -103,7 +103,7 @@ export default class AzureDevOpsBuild extends BaseSvgScrapingService {
   ) {
     // Microsoft documentation: https://docs.microsoft.com/en-us/rest/api/vsts/build/status/get
     const { status } = await fetch(this, {
-      url: `https://dev.azure.com/${organization}/${projectId}/_apis/build/status/${definitionId}`,
+      url: `https://tfs.briefyourmarket.com/${organization}/${projectId}/_apis/build/status/${definitionId}`,
       searchParams: {
         branchName: branch,
         stageName: stage,

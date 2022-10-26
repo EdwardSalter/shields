@@ -14,9 +14,12 @@ const latestBuildSchema = Joi.object({
 
 export default class AzureDevOpsBase extends BaseJsonService {
   static auth = {
-    passKey: 'azure_devops_token',
-    authorizedOrigins: ['https://dev.azure.com'],
+    // passKey: 'azure_devops_token',
+    authorizedOrigins: ['https://tfs.briefyourmarket.com'],
     defaultToEmptyStringForUser: true,
+    userKey: 'tfs_user',
+    // passKey: 'tfs_pass',
+    isRequired: true,
   }
 
   async fetch({ url, options, schema, errorMessages }) {
@@ -38,13 +41,13 @@ export default class AzureDevOpsBase extends BaseJsonService {
     errorMessages
   ) {
     // Microsoft documentation: https://docs.microsoft.com/en-us/rest/api/azure/devops/build/builds/list?view=azure-devops-rest-5.0
-    const url = `https://dev.azure.com/${organization}/${project}/_apis/build/builds`
+    const url = `https://tfs.briefyourmarket.com/${organization}/${project}/_apis/build/builds`
     const options = {
       searchParams: {
         definitions: definitionId,
         $top: 1,
         statusFilter: 'completed',
-        'api-version': '5.0-preview.4',
+        'api-version': '6.0',
       },
     }
 

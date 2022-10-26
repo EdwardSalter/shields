@@ -99,7 +99,7 @@ export default class AzureDevOpsCoverage extends AzureDevOpsBase {
       errorMessages
     )
     // Microsoft documentation: https://docs.microsoft.com/en-us/rest/api/azure/devops/test/code%20coverage/get%20build%20code%20coverage?view=azure-devops-rest-5.0
-    const url = `https://dev.azure.com/${organization}/${project}/_apis/test/codecoverage`
+    const url = `https://tfs.briefyourmarket.com/${organization}/${project}/_apis/test/codecoverage`
     const options = {
       searchParams: {
         buildId,
