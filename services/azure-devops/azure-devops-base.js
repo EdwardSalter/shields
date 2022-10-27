@@ -17,7 +17,7 @@ export default class AzureDevOpsBase extends BaseJsonService {
     // passKey: 'azure_devops_token',
     authorizedOrigins: ['https://tfs.briefyourmarket.com'],
     defaultToEmptyStringForUser: true,
-    userKey: 'tfs_user',
+    userKey: 'azure_devops_token',
     // passKey: 'tfs_pass',
     isRequired: true,
   }
